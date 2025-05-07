@@ -11,9 +11,10 @@ contract CounterScript is Script {
 
     function run() public {
         vm.startBroadcast();
-
+        console.log("Deploying MyToken...");
         token = new MyToken();
 
         vm.stopBroadcast();
+        console.log("MyToken deployed at:", address(token));
     }
 }
